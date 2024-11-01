@@ -29,6 +29,12 @@ For support with downloaded games (NoPspEmudrm) you must have installed the foll
 - *([Npdrm free mod](https://github.com/lusid1/npdrm_free_mod)).*<br>
 - *([Np Loader mod](https://github.com/lusid1/nploader_mod)).*<br>
 
+
+### Changelog 6.20_MOD ###
+removed title rename nag - always use scanned name
+forced stretched all games
+tbf - mark all, unmark all
+
 ### Changelog 6.20 ###
 - Correct support for adrenaline bubbles with boot.bin.
 
