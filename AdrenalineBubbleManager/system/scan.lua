@@ -40,7 +40,7 @@ function insert(tmp_sfo,obj,device,official)
 		{
 		  title = tmp_sfo.TITLE or obj.name, title_bubble = tmp_sfo.TITLE or obj.name, path = obj.path:lower(), name = obj.name, inst = false, icon = true,
 		  install = install, state = state, width = screen.textwidth(tmp_sfo.TITLE or obj.name), selcc = __COLOR, setpack = setpack,
-		  nostretched=false, mtime = obj.mtime, type = tmp_sfo.CATEGORY or STRINGS_UNK, gameid = tmp_sfo.DISC_ID or STRINGS_UNK,
+		  nostretched=true, mtime = obj.mtime, type = tmp_sfo.CATEGORY or STRINGS_UNK, gameid = tmp_sfo.DISC_ID or STRINGS_UNK,
 		  orig = orig, device = device, template = _template
 		} )
 end
@@ -382,7 +382,8 @@ function scan.show(objedit)
 					elseif __TITLE == 2 then
 						bubble_title = scan.list[scr.sel].name
 					else
-						bubble_title = osk.init(STRINGS_TITLE_OSK, scan.list[scr.sel].title or STRINGS_NAME_OSK, 128, __OSK_TYPE_DEFAULT, __OSK_MODE_TEXT)
+						--bubble_title = osk.init(STRINGS_TITLE_OSK, scan.list[scr.sel].title or STRINGS_NAME_OSK, 128, __OSK_TYPE_DEFAULT, __OSK_MODE_TEXT)
+						bubble_title = scan.list[scr.sel].title
 					end
 
 					if not bubble_title or (string.len(bubble_title)<=0) then bubble_title = scan.list[scr.sel].title or scan.list[scr.sel].name end
@@ -399,7 +400,8 @@ function scan.show(objedit)
 							elseif __TITLE == 2 then
 								bubble_title = scan.list[i].name
 							else
-								bubble_title = osk.init(STRINGS_TITLE_OSK, scan.list[i].title or STRINGS_NAME_OSK, 128, __OSK_TYPE_DEFAULT, __OSK_MODE_TEXT)
+								--bubble_title = osk.init(STRINGS_TITLE_OSK, scan.list[i].title or STRINGS_NAME_OSK, 128, __OSK_TYPE_DEFAULT, __OSK_MODE_TEXT)
+								bubble_title = scan.list[i].title
 							end
 
 							if not bubble_title or (string.len(bubble_title)<=0) then bubble_title = scan.list[i].title or scan.list[i].name end
