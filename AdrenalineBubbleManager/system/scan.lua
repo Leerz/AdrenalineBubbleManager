@@ -460,7 +460,8 @@ function scan.show(objedit)
 								local bubble_title = nil
 								if scan.list[i].title then
 									if __TITLE == 0 then
-										bubble_title = osk.init(STRINGS_TITLE_OSK, scan.list[i].title or STRINGS_NAME_OSK, 128, __OSK_TYPE_DEFAULT, __OSK_MODE_TEXT)
+										--bubble_title = osk.init(STRINGS_TITLE_OSK, scan.list[i].title or STRINGS_NAME_OSK, 128, __OSK_TYPE_DEFAULT, __OSK_MODE_TEXT)
+										bubble_title = scan.list[scr.sel].title
 									end
 								end
 								if not bubble_title or (string.len(bubble_title)<=0) then bubble_title = scan.list[i].title or scan.list[i].name end
